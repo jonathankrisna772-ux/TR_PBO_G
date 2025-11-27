@@ -5,6 +5,13 @@
         <group>
             <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/mahasiswa/model.java</file>
             <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/dosen/model.java</file>
+            <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/super_admin/model.java</file>
+            <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/prodi/model_prodi.java</file>
+            <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/users/model_users.java</file>
+            <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/matakuliah/model_mata_kuliah.java</file>
+            <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/kelas/model_kelas.java</file>
+            <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/jadwal/model_jadwal.java</file>
+            <file>file:/D:/DATA%20BACKUP/NetBeansProject/TR_PBO/src/krs/model_krs.java</file>
         </group>
     </open-files>
 </project-private>
