@@ -1,4 +1,4 @@
-package matakuliah;
+package model;
 
 public class model_mata_kuliah {
     private int mk_id;
@@ -7,13 +7,13 @@ public class model_mata_kuliah {
     private String nama_mk;
     private int sks;
     
-public model_mata_kuliah(int prodi_id,int mk_id,String kode_mk, String nama_mk, int sks){
-this.mk_id = mk_id;
-this.prodi_id = prodi_id;
-this.kode_mk = kode_mk;
-this.nama_mk = nama_mk;
-this.sks = sks;
-}
+    public model_mata_kuliah(int prodi_id,int mk_id,String kode_mk, String nama_mk, int sks){
+        this.mk_id = mk_id;
+        this.prodi_id = prodi_id;
+        this.kode_mk = kode_mk;
+        this.nama_mk = nama_mk;
+        this.sks = sks;
+    }
 
     public int getProdi_id() {
         return prodi_id;

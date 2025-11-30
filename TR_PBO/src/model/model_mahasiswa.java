@@ -1,29 +1,29 @@
-package dosen;
+package model;
 
-public class model {
- 
-    private String dosenId;
+public class model_mahasiswa {
+    private String nim;
     private int userId;
     private int prodiId;
     private String nama;
     private String email;
     private int angkatan;
     
-public model(String dosenId,int userId, int prodiId, String nama, String email){
-this.dosenId = dosenId;
+public model_mahasiswa(String nim,int userId, int prodiId, String nama, String email, int angkatan){
+this.nim = nim;
 this.userId = userId;
 this.prodiId = prodiId;
 this.nama = nama;
 this.email = email;
+this.angkatan = angkatan;
 
 }
 
-    public String getDosenId() {
-        return dosenId;
+    public String getNim() {
+        return nim;
     }
 
-    public void setDosenId(String dosenId) {
-        this.dosenId = dosenId;
+    public void setNim(String nim) {
+        this.nim = nim;
     }
 
     public int getUserId() {
@@ -66,9 +66,5 @@ this.email = email;
         this.angkatan = angkatan;
     }
 
-   
-
     
 }
-
-

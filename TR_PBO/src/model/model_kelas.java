@@ -1,4 +1,4 @@
-package kelas;
+package model;
 
 public class model_kelas {
     private String kode_kelas;
@@ -7,13 +7,13 @@ public class model_kelas {
     private String nama_kelas;
     private int kapasitas;
     
-public model_kelas(String kode_kelas,String dosen_id,int mk_id, String nama_kelas, int kapasitas){
-this.kode_kelas = kode_kelas;
-this.dosen_id = dosen_id;
-this.mk_id = mk_id;
-this.nama_kelas = nama_kelas;
-this.kapasitas = kapasitas;
-}
+    public model_kelas(String kode_kelas,String dosen_id,int mk_id, String nama_kelas, int kapasitas){
+        this.kode_kelas = kode_kelas;
+        this.dosen_id = dosen_id;
+        this.mk_id = mk_id;
+        this.nama_kelas = nama_kelas;
+        this.kapasitas = kapasitas;
+    }
 
     public String getKode_kelas() {
         return kode_kelas;

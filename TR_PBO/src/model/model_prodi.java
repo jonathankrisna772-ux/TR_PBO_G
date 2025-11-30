@@ -1,4 +1,4 @@
-package prodi;
+package model;
 
 public class model_prodi {
 
@@ -6,11 +6,11 @@ public class model_prodi {
     private String nama_prodi;
     private String fakultas;
     
-public model_prodi(int prodi,String nama_prodi,String fakultas){
-this.prodi = prodi;
-this.nama_prodi = nama_prodi;
-this.fakultas = fakultas;
-}
+    public model_prodi(int prodi,String nama_prodi,String fakultas){
+        this.prodi = prodi;
+        this.nama_prodi = nama_prodi;
+        this.fakultas = fakultas;
+        }
 
     public int getProdi() {
         return prodi;

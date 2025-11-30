@@ -1,4 +1,4 @@
-package krs;
+package model;
 
 import java.time.LocalDateTime;
 
@@ -10,13 +10,13 @@ public class model_krs {
     private LocalDateTime tanggal_registrasi;
     
     
-public model_krs(String kode_kelas,String dosen_id,int mk_id, String nama_kelas, int kapasitas){
-this.kode_kelas = kode_kelas;
-this.nim = nim;
-this.krs_id = krs_id;
-this.status = status;
-this.tanggal_registrasi = tanggal_registrasi;
-}
+    public model_krs(String kode_kelas,String dosen_id,int mk_id, String nama_kelas, int kapasitas){
+        this.kode_kelas = kode_kelas;
+        this.nim = nim;
+        this.krs_id = krs_id;
+        this.status = status;
+        this.tanggal_registrasi = tanggal_registrasi;
+    }
 
     public String getKode_kelas() {
         return kode_kelas;

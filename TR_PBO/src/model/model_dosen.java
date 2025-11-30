@@ -1,29 +1,28 @@
-package mahasiswa;
+package model;
 
-public class model {
-    private String nim;
+public class model_dosen {
+ 
+    private String dosenId;
     private int userId;
     private int prodiId;
     private String nama;
     private String email;
     private int angkatan;
     
-public model(String nim,int userId, int prodiId, String nama, String email, int angkatan){
-this.nim = nim;
-this.userId = userId;
-this.prodiId = prodiId;
-this.nama = nama;
-this.email = email;
-this.angkatan = angkatan;
-
-}
-
-    public String getNim() {
-        return nim;
+    public model_dosen(String dosenId,int userId, int prodiId, String nama, String email){
+        this.dosenId = dosenId;
+        this.userId = userId;
+        this.prodiId = prodiId;
+        this.nama = nama;
+        this.email = email;
     }
 
-    public void setNim(String nim) {
-        this.nim = nim;
+    public String getDosenId() {
+        return dosenId;
+    }
+
+    public void setDosenId(String dosenId) {
+        this.dosenId = dosenId;
     }
 
     public int getUserId() {
@@ -66,5 +65,9 @@ this.angkatan = angkatan;
         this.angkatan = angkatan;
     }
 
+   
+
     
 }
+
+

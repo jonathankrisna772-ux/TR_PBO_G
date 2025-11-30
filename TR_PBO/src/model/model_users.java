@@ -1,4 +1,4 @@
-package users;
+package model;
 
 public class model_users {
     private int user_id;
@@ -6,12 +6,12 @@ public class model_users {
     private String password;
     private String role;
     
-public model_users(int user_id,String username,String password, String role){
-this.user_id = user_id;
-this.username = username;
-this.password = password;
-this.role = role;
-}
+    public model_users(int user_id,String username,String password, String role){
+        this.user_id = user_id;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
 
     public int getUser_id() {
         return user_id;
