@@ -30,16 +30,14 @@ public class dosen_jadwal extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         homebutton = new javax.swing.JButton();
-        regisbutton = new javax.swing.JButton();
         jadwalbutton = new javax.swing.JButton();
         kastlabel = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        logoutbutton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jadwaldosentable = new javax.swing.JTable();
         astlbl1 = new javax.swing.JLabel();
         iclbl1 = new javax.swing.JLabel();
         icastedu1 = new javax.swing.JLabel();
-        kartustudibutton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,24 +45,27 @@ public class dosen_jadwal extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(800, 600));
 
         homebutton.setText("Home");
-
-        regisbutton.setText("Registrasi");
-        regisbutton.addActionListener(new java.awt.event.ActionListener() {
+        homebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                regisbuttonActionPerformed(evt);
+                homebuttonActionPerformed(evt);
             }
         });
 
-        jadwalbutton.setText("JadwalKuliah");
+        jadwalbutton.setText("Jadwal");
+        jadwalbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jadwalbuttonActionPerformed(evt);
+            }
+        });
 
         kastlabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         kastlabel.setForeground(new java.awt.Color(255, 255, 255));
         kastlabel.setText("Jadwal Mengajar ");
 
-        jButton1.setText("Log Out");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        logoutbutton.setText("Log Out");
+        logoutbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                logoutbuttonActionPerformed(evt);
             }
         });
 
@@ -103,13 +104,6 @@ public class dosen_jadwal extends javax.swing.JFrame {
         icastedu1.setForeground(new java.awt.Color(255, 255, 255));
         icastedu1.setText("icast.edu");
 
-        kartustudibutton.setText("Kartu Studi");
-        kartustudibutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kartustudibuttonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -118,13 +112,10 @@ public class dosen_jadwal extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jadwalbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(regisbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(kartustudibutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(homebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(logoutbutton)
+                            .addComponent(homebutton, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                            .addComponent(jadwalbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(105, 105, 105)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(kastlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -154,19 +145,15 @@ public class dosen_jadwal extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addComponent(kastlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(homebutton)
                         .addGap(18, 18, 18)
-                        .addComponent(regisbutton)
-                        .addGap(18, 18, 18)
-                        .addComponent(kartustudibutton)
-                        .addGap(18, 18, 18)
-                        .addComponent(jadwalbutton))
+                        .addComponent(jadwalbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(logoutbutton))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -189,17 +176,17 @@ public class dosen_jadwal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void regisbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regisbuttonActionPerformed
+    private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_regisbuttonActionPerformed
+    }//GEN-LAST:event_logoutbuttonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_homebuttonActionPerformed
 
-    private void kartustudibuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kartustudibuttonActionPerformed
+    private void jadwalbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jadwalbuttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_kartustudibuttonActionPerformed
+    }//GEN-LAST:event_jadwalbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,13 +218,11 @@ public class dosen_jadwal extends javax.swing.JFrame {
     private javax.swing.JButton homebutton;
     private javax.swing.JLabel icastedu1;
     private javax.swing.JLabel iclbl1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jadwalbutton;
     private javax.swing.JTable jadwaldosentable;
-    private javax.swing.JButton kartustudibutton;
     private javax.swing.JLabel kastlabel;
-    private javax.swing.JButton regisbutton;
+    private javax.swing.JButton logoutbutton;
     // End of variables declaration//GEN-END:variables
 }

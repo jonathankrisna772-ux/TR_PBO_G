@@ -122,11 +122,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Home"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homebuttonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jadwalbutton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Jadwal"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jadwalbuttonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="homelabel">
           <Properties>

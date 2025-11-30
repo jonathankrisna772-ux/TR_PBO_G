@@ -33,7 +33,7 @@ public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
         regisbutton = new javax.swing.JButton();
         jadwalbutton = new javax.swing.JButton();
         kastlabel = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        logoutbutton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         kartustuditable = new javax.swing.JTable();
         astlbl1 = new javax.swing.JLabel();
@@ -61,10 +61,10 @@ public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
         kastlabel.setForeground(new java.awt.Color(255, 255, 255));
         kastlabel.setText("Jadwal Kuliah Mahasiswa");
 
-        jButton1.setText("Log Out");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        logoutbutton.setText("Log Out");
+        logoutbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                logoutbuttonActionPerformed(evt);
             }
         });
 
@@ -119,7 +119,7 @@ public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(logoutbutton)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jadwalbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(regisbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,7 +165,7 @@ public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
                         .addComponent(jadwalbutton))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addComponent(jButton1)
+                .addComponent(logoutbutton)
                 .addContainerGap(168, Short.MAX_VALUE))
         );
 
@@ -193,9 +193,9 @@ public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_regisbuttonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_logoutbuttonActionPerformed
 
     private void kartustudibuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kartustudibuttonActionPerformed
         // TODO add your handling code here:
@@ -231,13 +231,13 @@ public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
     private javax.swing.JButton homebutton;
     private javax.swing.JLabel icastedu1;
     private javax.swing.JLabel iclbl1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jadwalbutton;
     private javax.swing.JButton kartustudibutton;
     private javax.swing.JTable kartustuditable;
     private javax.swing.JLabel kastlabel;
+    private javax.swing.JButton logoutbutton;
     private javax.swing.JButton regisbutton;
     // End of variables declaration//GEN-END:variables
 }

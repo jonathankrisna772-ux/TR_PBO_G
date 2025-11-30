@@ -44,8 +44,18 @@ public class dosen_home extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(800, 600));
 
         homebutton.setText("Home");
+        homebutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homebuttonActionPerformed(evt);
+            }
+        });
 
         jadwalbutton.setText("Jadwal");
+        jadwalbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jadwalbuttonActionPerformed(evt);
+            }
+        });
 
         homelabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         homelabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -148,6 +158,14 @@ public class dosen_home extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homebuttonActionPerformed
+
+    private void jadwalbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jadwalbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jadwalbuttonActionPerformed
 
     /**
      * @param args the command line arguments

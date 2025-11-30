@@ -47,8 +47,18 @@ public class super_admin_hapus_kelas extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(800, 600));
 
         homebutton.setText("Home");
+        homebutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homebuttonActionPerformed(evt);
+            }
+        });
 
         editbutton.setText("Edit");
+        editbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editbuttonActionPerformed(evt);
+            }
+        });
 
         homelabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         homelabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,6 +85,12 @@ public class super_admin_hapus_kelas extends javax.swing.JFrame {
 
         kodematkullabel1.setForeground(new java.awt.Color(255, 255, 255));
         kodematkullabel1.setText("Kode Mata Kuliah");
+
+        kodematkulfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kodematkulfieldActionPerformed(evt);
+            }
+        });
 
         hapusbutton.setText("Hapus");
         hapusbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -177,6 +193,18 @@ public class super_admin_hapus_kelas extends javax.swing.JFrame {
     private void hapusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusbuttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_hapusbuttonActionPerformed
+
+    private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homebuttonActionPerformed
+
+    private void editbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editbuttonActionPerformed
+
+    private void kodematkulfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodematkulfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kodematkulfieldActionPerformed
 
     /**
      * @param args the command line arguments

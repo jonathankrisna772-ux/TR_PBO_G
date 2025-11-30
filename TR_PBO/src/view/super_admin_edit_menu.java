@@ -47,8 +47,18 @@ public class super_admin_edit_menu extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(800, 600));
 
         homebutton.setText("Home");
+        homebutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homebuttonActionPerformed(evt);
+            }
+        });
 
         editbutton.setText("Edit");
+        editbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editbuttonActionPerformed(evt);
+            }
+        });
 
         homelabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         homelabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,10 +87,25 @@ public class super_admin_edit_menu extends javax.swing.JFrame {
         icastedu.setText("icast.edu");
 
         tambahkelasbutton.setText("Tambah Kelas");
+        tambahkelasbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tambahkelasbuttonActionPerformed(evt);
+            }
+        });
 
         editoptionbutton.setText("Edit Kelas");
+        editoptionbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editoptionbuttonActionPerformed(evt);
+            }
+        });
 
         deletebutton.setText("Hapus Kelas");
+        deletebutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletebuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -166,6 +191,26 @@ public class super_admin_edit_menu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homebuttonActionPerformed
+
+    private void editbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editbuttonActionPerformed
+
+    private void tambahkelasbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahkelasbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tambahkelasbuttonActionPerformed
+
+    private void editoptionbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editoptionbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editoptionbuttonActionPerformed
+
+    private void deletebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deletebuttonActionPerformed
 
     /**
      * @param args the command line arguments

@@ -143,7 +143,6 @@ public class login_mahasiswa extends javax.swing.JFrame {
 
     private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_loginbuttonActionPerformed
 
     private void lupapasswordbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lupapasswordbuttonActionPerformed

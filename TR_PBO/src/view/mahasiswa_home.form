@@ -76,7 +76,7 @@
                               <Component id="jadwalbutton" alignment="0" max="32767" attributes="0"/>
                               <Component id="regisbutton" alignment="0" max="32767" attributes="0"/>
                               <Component id="homebutton" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="logoutbutton" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="kartustudibutton" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
@@ -117,7 +117,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jadwalbutton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="logoutbutton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="167" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -128,6 +128,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Home"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homebuttonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="regisbutton">
           <Properties>
@@ -141,6 +144,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="JadwalKuliah"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jadwalbuttonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="homelabel">
           <Properties>
@@ -161,12 +167,12 @@
             <Property name="text" type="java.lang.String" value="Selamat datang Mahasiswa dalam sistem ICAST"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="logoutbutton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Log Out"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutbuttonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="astlbl">

@@ -59,8 +59,18 @@ public class super_admin_tambah_kelas extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(800, 600));
 
         homebutton.setText("Home");
+        homebutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homebuttonActionPerformed(evt);
+            }
+        });
 
         editbutton.setText("Edit");
+        editbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editbuttonActionPerformed(evt);
+            }
+        });
 
         homelabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         homelabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,7 +116,54 @@ public class super_admin_tambah_kelas extends javax.swing.JFrame {
         ruangkelaslabel.setForeground(new java.awt.Color(255, 255, 255));
         ruangkelaslabel.setText("Ruang Kelas");
 
+        kodematkulfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kodematkulfieldActionPerformed(evt);
+            }
+        });
+
+        namamatkulfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                namamatkulfieldActionPerformed(evt);
+            }
+        });
+
+        dosenpengampufield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dosenpengampufieldActionPerformed(evt);
+            }
+        });
+
+        kodedosenpengampufield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kodedosenpengampufieldActionPerformed(evt);
+            }
+        });
+
+        harifield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                harifieldActionPerformed(evt);
+            }
+        });
+
+        jamfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jamfieldActionPerformed(evt);
+            }
+        });
+
+        ruangkelasfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ruangkelasfieldActionPerformed(evt);
+            }
+        });
+
         tambahbutton.setText("Tambah");
+        tambahbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tambahbuttonActionPerformed(evt);
+            }
+        });
 
         infolabel.setForeground(new java.awt.Color(255, 255, 255));
         infolabel.setText("Masukkan data kelas yang akan ditambahkan");
@@ -224,7 +281,7 @@ public class super_admin_tambah_kelas extends javax.swing.JFrame {
                             .addComponent(ruangkelasfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(33, 33, 33)
                 .addComponent(tambahbutton)
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -250,6 +307,46 @@ public class super_admin_tambah_kelas extends javax.swing.JFrame {
     private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_logoutbuttonActionPerformed
+
+    private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homebuttonActionPerformed
+
+    private void editbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editbuttonActionPerformed
+
+    private void kodematkulfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodematkulfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kodematkulfieldActionPerformed
+
+    private void namamatkulfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namamatkulfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_namamatkulfieldActionPerformed
+
+    private void dosenpengampufieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosenpengampufieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dosenpengampufieldActionPerformed
+
+    private void kodedosenpengampufieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodedosenpengampufieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kodedosenpengampufieldActionPerformed
+
+    private void harifieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_harifieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_harifieldActionPerformed
+
+    private void jamfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jamfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jamfieldActionPerformed
+
+    private void ruangkelasfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruangkelasfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ruangkelasfieldActionPerformed
+
+    private void tambahbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tambahbuttonActionPerformed
 
     /**
      * @param args the command line arguments
