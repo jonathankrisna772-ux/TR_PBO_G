@@ -160,11 +160,15 @@ public class super_admin_home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // TODO add your handling code here:
+    // Go to the Edit Menu
+    super_admin_edit_menu menu = new super_admin_edit_menu();
+    menu.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_homebuttonActionPerformed
 
     private void editbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbuttonActionPerformed
-        // TODO add your handling code here:
+    new super_admin_edit_menu().setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_editbuttonActionPerformed
 
     /**

@@ -9,7 +9,11 @@ package view;
  * @author DISKA
  */
 public class mahasiswa_registrasi extends javax.swing.JFrame {
-    
+    private model.model_mahasiswa currentUser;
+    public void setMahasiswa(model.model_mahasiswa mhs) {
+    this.currentUser = mhs;
+    }
+   
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(mahasiswa_registrasi.class.getName());
 
     /**
@@ -213,7 +217,27 @@ public class mahasiswa_registrasi extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void regisbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regisbuttonActionPerformed
-        // TODO add your handling code here:
+        // FIX: Change 'jTable1' to 'regismatkultable'
+        int row = regismatkultable.getSelectedRow(); 
+
+        if (row == -1) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Pilih kelas di tabel dulu!");
+            return;
+        }
+
+        // FIX: Change 'jTable1' to 'regismatkultable' here too
+        String kodeKelas = regismatkultable.getValueAt(row, 0).toString(); 
+
+        // Call the controller
+        controller.krs_controller control = new controller.krs_controller();
+
+        // We need the current user's NIM. 
+        // If you haven't set up 'currentUser' yet, use "12345" for testing.
+        String nim = (currentUser != null) ? currentUser.getNim() : "12345";
+
+        String hasil = control.ambilKelas(nim, kodeKelas);
+
+        javax.swing.JOptionPane.showMessageDialog(this, hasil);
     }//GEN-LAST:event_regisbuttonActionPerformed
 
     private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
@@ -229,7 +253,10 @@ public class mahasiswa_registrasi extends javax.swing.JFrame {
     }//GEN-LAST:event_jadwalbuttonActionPerformed
 
     private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // TODO add your handling code here:
+    mahasiswa_home home = new mahasiswa_home();
+    home.setMahasiswa(this.currentUser);
+    home.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_homebuttonActionPerformed
 
     /**

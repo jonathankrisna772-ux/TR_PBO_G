@@ -9,6 +9,36 @@ package view;
  * @author DISKA
  */
 public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
+    // Variabel User
+    private model.model_mahasiswa currentUser;
+
+    // Dipanggil dari Home
+    public void setMahasiswa(model.model_mahasiswa mhs) {
+        this.currentUser = mhs;
+        loadTable();
+    }
+
+    private void loadTable() {
+        // Ambil data jadwal dari Controller
+        controller.jadwal_controller control = new controller.jadwal_controller();
+        // Pakai data dummy 12345 jika currentUser null (Demo Mode)
+        String nim = (currentUser != null) ? currentUser.getNim() : "12345";
+        
+        java.util.List<model.model_jadwal> list = control.getJadwalByNim(nim);
+        
+        // Masukkan ke JTable
+        javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) kartustuditable.getModel();
+        model.setRowCount(0);
+        
+        for (model.model_jadwal j : list) {
+            model.addRow(new Object[]{ 
+                j.getHari(), 
+                j.getJam_mulai() + "-" + j.getJam_selesai(), 
+                j.getKode_kelas(), 
+                j.getRuang() 
+            });
+        }
+    }
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(mahasiswa_jadwalkuliah.class.getName());
 
@@ -47,6 +77,11 @@ public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(800, 600));
 
         homebutton.setText("Home");
+        homebutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homebuttonActionPerformed(evt);
+            }
+        });
 
         regisbutton.setText("Registrasi");
         regisbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -200,6 +235,13 @@ public class mahasiswa_jadwalkuliah extends javax.swing.JFrame {
     private void kartustudibuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kartustudibuttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_kartustudibuttonActionPerformed
+
+    private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
+    mahasiswa_home home = new mahasiswa_home();
+    home.setMahasiswa(this.currentUser); // Go back home with data
+    home.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_homebuttonActionPerformed
 
     /**
      * @param args the command line arguments

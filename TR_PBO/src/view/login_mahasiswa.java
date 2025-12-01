@@ -142,7 +142,42 @@ public class login_mahasiswa extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
-        // TODO add your handling code here:
+        String input = nimfield.getText().trim();
+        String pass = new String(passwordfield.getPassword());
+
+        controller.auth_controller auth = new controller.auth_controller();
+
+        // 1. Try Mahasiswa
+        model.model_mahasiswa mhs = auth.loginMahasiswa(input, pass);
+        if (mhs != null) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Login Berhasil (Mahasiswa)!");
+            mahasiswa_home home = new mahasiswa_home();
+            home.setMahasiswa(mhs);
+            home.setVisible(true);
+            this.dispose();
+            return;
+        }
+
+        // 2. Try Dosen
+        model.model_dosen dosen = auth.loginDosen(input, pass);
+        if (dosen != null) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Login Berhasil (Dosen)!");
+            dosen_home home = new dosen_home();
+            home.setVisible(true);
+            this.dispose();
+            return;
+        }
+
+        // 3. Try Admin
+        model.model_super_admin admin = auth.loginAdmin(input, pass);
+        if (admin != null) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Login Berhasil (Admin)!");
+            new super_admin_home().setVisible(true);
+            this.dispose();
+            return;
+        }
+
+        javax.swing.JOptionPane.showMessageDialog(this, "Login Gagal! Gunakan: 12345, D001, atau admin");
     }//GEN-LAST:event_loginbuttonActionPerformed
 
     private void lupapasswordbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lupapasswordbuttonActionPerformed

@@ -9,6 +9,30 @@ package view;
  * @author DISKA
  */
 public class mahasiswa_kartustudi extends javax.swing.JFrame {
+    private model.model_mahasiswa currentUser;
+
+    public void setMahasiswa(model.model_mahasiswa mhs) {
+        this.currentUser = mhs;
+        loadTable();
+    }
+
+    private void loadTable() {
+        controller.krs_controller control = new controller.krs_controller();
+        String nim = (currentUser != null) ? currentUser.getNim() : "12345";
+        
+        java.util.List<model.model_krs> list = control.getKrsByNim(nim);
+        
+        javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) kartustuditable.getModel();
+        model.setRowCount(0);
+        
+        for (model.model_krs k : list) {
+            model.addRow(new Object[]{ 
+                k.getKode_kelas(), 
+                k.getStatus(),
+                "2023-01-01" // Tanggal dummy
+            });
+        }
+    }
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(mahasiswa_kartustudi.class.getName());
 

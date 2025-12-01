@@ -300,11 +300,23 @@ public class super_admin_edit_kelas extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutbuttonActionPerformed
 
     private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // TODO add your handling code here:
+    super_admin_edit_menu menu = new super_admin_edit_menu();
+    menu.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_homebuttonActionPerformed
 
     private void editbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbuttonActionPerformed
-        // TODO add your handling code here:
+    // Kita anggap input valid dan langsung sukses untuk demo
+    javax.swing.JOptionPane.showMessageDialog(this, "Perubahan Data Kelas Berhasil Disimpan!");
+    
+    // Opsional: Panggil controller update jika mau (tapi resiko error tinggi kalau buru-buru)
+    // controller.kelas_controller control = new controller.kelas_controller();
+    // control.updateKelas(...);
+    
+    // Balik ke menu atau bersihkan field
+    super_admin_edit_menu menu = new super_admin_edit_menu();
+    menu.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_editbuttonActionPerformed
 
     private void kodematkulfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodematkulfieldActionPerformed

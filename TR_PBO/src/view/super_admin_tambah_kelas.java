@@ -309,11 +309,59 @@ public class super_admin_tambah_kelas extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutbuttonActionPerformed
 
     private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // TODO add your handling code here:
+    super_admin_edit_menu menu = new super_admin_edit_menu();
+    menu.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_homebuttonActionPerformed
 
     private void editbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbuttonActionPerformed
-        // TODO add your handling code here:
+        // 1. Ambil Semua Data Input
+        String kodeMk = kodematkulfield.getText();       // TI-101
+        String namaKelas = namamatkulfield.getText();    // A
+        String dosenId = kodedosenpengampufield.getText(); // D001
+
+        // Data Tambahan (Jadwal)
+        String hari = harifield.getText();      // Senin
+        String jam = jamfield.getText();        // 08:00-10:00
+        String ruang = ruangkelasfield.getText(); // Lab 1
+
+        // 2. Validasi
+        if (kodeMk.isEmpty() || namaKelas.isEmpty() || dosenId.isEmpty() || hari.isEmpty() || jam.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Mohon isi semua data (Termasuk Hari & Jam)!");
+            return;
+        }
+
+        // 3. Cari MK ID
+        controller.matakuliah_controller mkControl = new controller.matakuliah_controller();
+        int mkId = mkControl.getMkIdByCode(kodeMk);
+
+        if (mkId == 0) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Kode MK tidak ditemukan! (Coba: TI-101)");
+            return;
+        }
+
+        // 4. Generate Kode Kelas
+        String kodeKelas = kodeMk.replace("-", "") + "-" + namaKelas.replace(" ", "");
+
+        // 5. SIMPAN LENGKAP (Kelas + Jadwal)
+        controller.super_admin_controller adminControl = new controller.super_admin_controller();
+
+        // Panggil fungsi baru 'tambahKelasLengkap'
+        // Kapasitas kita hardcode 30 atau ambil dari field jika ada
+        boolean sukses = adminControl.tambahKelasLengkap(kodeKelas, dosenId, mkId, namaKelas, 30, hari, jam, ruang);
+
+        if (sukses) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Sukses! Kelas & Jadwal tersimpan.");
+            // Bersihkan Form
+            kodematkulfield.setText("");
+            namamatkulfield.setText("");
+            kodedosenpengampufield.setText("");
+            harifield.setText("");
+            jamfield.setText("");
+            ruangkelasfield.setText("");
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Gagal. Cek format jam (contoh: 08:00-10:00) atau duplikasi data.");
+        }
     }//GEN-LAST:event_editbuttonActionPerformed
 
     private void kodematkulfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodematkulfieldActionPerformed

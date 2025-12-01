@@ -193,7 +193,9 @@ public class super_admin_edit_menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // TODO add your handling code here:
+    super_admin_home home = new super_admin_home();
+    home.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_homebuttonActionPerformed
 
     private void editbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbuttonActionPerformed
@@ -201,15 +203,20 @@ public class super_admin_edit_menu extends javax.swing.JFrame {
     }//GEN-LAST:event_editbuttonActionPerformed
 
     private void tambahkelasbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahkelasbuttonActionPerformed
-        // TODO add your handling code here:
+    new super_admin_tambah_kelas().setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_tambahkelasbuttonActionPerformed
 
     private void editoptionbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editoptionbuttonActionPerformed
-        // TODO add your handling code here:
+    super_admin_edit_kelas page = new super_admin_edit_kelas();
+    page.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_editoptionbuttonActionPerformed
 
     private void deletebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebuttonActionPerformed
-        // TODO add your handling code here:
+    super_admin_hapus_kelas page = new super_admin_hapus_kelas();
+    page.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_deletebuttonActionPerformed
 
     /**

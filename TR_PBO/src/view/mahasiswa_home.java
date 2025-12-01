@@ -9,6 +9,15 @@ package view;
  * @author DISKA
  */
 public class mahasiswa_home extends javax.swing.JFrame {
+    // variable buat simpen user yg login
+    private model.model_mahasiswa currentUser;
+
+    // method buat nerima data dari login
+    public void setMahasiswa(model.model_mahasiswa mhs) {
+        this.currentUser = mhs;
+        // Update the labels on screen (Optional, but looks nice)
+        // homelabel.setText("Hi, " + mhs.getNama()); 
+    }
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(mahasiswa_home.class.getName());
 
@@ -178,7 +187,10 @@ public class mahasiswa_home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void regisbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regisbuttonActionPerformed
-        // TODO add your handling code here:
+    mahasiswa_registrasi page = new mahasiswa_registrasi();
+    page.setMahasiswa(this.currentUser);
+    page.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_regisbuttonActionPerformed
 
     private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
@@ -190,11 +202,17 @@ public class mahasiswa_home extends javax.swing.JFrame {
     }//GEN-LAST:event_kartustudibuttonActionPerformed
 
     private void homebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebuttonActionPerformed
-        // TODO add your handling code here:
+    mahasiswa_home home = new mahasiswa_home();
+    home.setMahasiswa(this.currentUser); // Go back home with data
+    home.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_homebuttonActionPerformed
 
     private void jadwalbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jadwalbuttonActionPerformed
-        // TODO add your handling code here:
+        mahasiswa_jadwalkuliah page = new mahasiswa_jadwalkuliah();
+        page.setMahasiswa(this.currentUser); // pass user data lagi
+        page.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jadwalbuttonActionPerformed
 
     /**
